@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — ONELIK</title>
+<meta name="theme-color" content="#0c0e12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230c0e12'/%3E%3Ctext x='30' y='44' font-family='Arial' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EO%3C/text%3E%3Ccircle cx='50' cy='46' r='6' fill='%231d3a6b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="order">
+
+<a class="skip-link" href="index.html#shop">Skip to shop</a>
+
+<header class="header is-solid" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="ONELIK home">ONELIK<i></i></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="index.html#shop" class="nav-link is-active">Shop</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" type="button" data-cart-open aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1.2 13H4.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-count" data-cart-count hidden>0</span>
+      </button>
+      <button class="burger" type="button" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <nav class="mmenu-nav" aria-label="Mobile navigation">
+    <a href="index.html"><i>01</i>Home</a>
+    <a href="index.html#shop"><i>02</i>Shop</a>
+    <a href="index.html#about"><i>03</i>About</a>
+    <a href="index.html#contact"><i>04</i>Contact</a>
+  </nav>
+  <div class="mmenu-foot">
+    <p>Carefully selected. Made for modern living.</p>
+    <a class="btn btn-navy btn-sm" href="https://wa.me/201062703091" target="_blank" rel="noopener">WhatsApp Us</a>
+  </div>
+</div>
+
+<main class="page-main">
+  <section class="sec order-sec">
+    <div class="container">
+
+      <ol class="osteps" data-rv aria-label="Order progress">
+        <li class="done"><span>01</span>Bag</li>
+        <li class="now"><span>02</span>Details</li>
+        <li><span>03</span>WhatsApp</li>
+      </ol>
+
+      <div class="order-grid">
+
+        <!-- ── Customer form ── -->
+        <form class="order-form" id="orderForm" novalidate>
+          <h1 class="order-title" data-rv>Delivery details</h1>
+          <p class="order-sub" data-rv style="--d:.06s">Only four fields. We'll confirm everything with you on WhatsApp.</p>
+
+          <div class="field" data-rv style="--d:.12s">
+            <label for="fName">Full Name</label>
+            <input class="input" type="text" id="fName" name="name" autocomplete="name" placeholder="Your full name">
+            <span class="fmsg" role="alert"></span>
+          </div>
+
+          <div class="field" data-rv style="--d:.18s">
+            <label for="fPhone">Phone Number</label>
+            <input class="input" type="tel" id="fPhone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="01XXXXXXXXX">
+            <span class="fmsg" role="alert"></span>
+          </div>
+
+          <div class="field" data-rv style="--d:.24s">
+            <label for="fGov">Governorate</label>
+            <select class="input select" id="fGov" name="governorate">
+              <option value="" selected disabled>Select your governorate</option>
+            </select>
+            <span class="fmsg" role="alert"></span>
+          </div>
+
+          <div class="field" data-rv style="--d:.3s">
+            <label for="fAddress">Detailed Address</label>
+            <textarea class="input" id="fAddress" name="address" rows="3" autocomplete="street-address" placeholder="Street, building, apartment, landmark…"></textarea>
+            <span class="fmsg" role="alert"></span>
+          </div>
+
+          <button class="btn btn-navy btn-lg btn-block" type="submit" id="confirmBtn" data-rv style="--d:.36s">
+            Confirm Order
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+
+          <p class="secure-note" data-rv style="--d:.42s">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            No online payment. Your order opens in WhatsApp — review it and press send yourself.
+          </p>
+        </form>
+
+        <!-- ── Order summary ── -->
+        <aside class="summary" data-rv style="--d:.15s" aria-label="Order summary">
+          <h2 class="summary-title">Order Summary</h2>
+          <div class="summary-product">
+            <img id="sumImage" src="" alt="" data-fallback width="120" height="150">
+            <div>
+              <p class="sum-name" id="sumName"></p>
+              <p class="sum-unit"><span id="sumUnit"></span> / unit</p>
+            </div>
+          </div>
+          <div class="summary-row qty-row">
+            <span>Quantity</span>
+            <div class="stepper stepper-sm">
+              <button type="button" data-step="-1" aria-label="Decrease quantity">−</button>
+              <input id="sumQty" type="text" inputmode="numeric" value="1" aria-label="Quantity" readonly>
+              <button type="button" data-step="1" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          <div class="summary-row"><span>Subtotal</span><span id="sumSubtotal"></span></div>
+          <div class="summary-row muted"><span>Delivery</span><span>Calculated on arrival</span></div>
+          <div class="summary-total" aria-live="polite"><span>Total</span><strong id="sumTotal"></strong></div>
+          <p class="summary-note">Cash on delivery · Egypt-wide</p>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="logo logo-light">ONELIK<i></i></p>
+        <p>A modern online store bringing together carefully selected products for everyday life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#shop">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="https://wa.me/201062703091" target="_blank" rel="noopener">WhatsApp — +20 106 270 3091</a>
+        <a href="mailto:hello@oneliks.store">hello@oneliks.store</a>
+        <span>Cairo, Egypt</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ONELIK. All rights reserved.</p>
+      <p>Developed by <strong>Mohaned Eltohami</strong></p>
+    </div>
+  </div>
+  <div class="footer-word" aria-hidden="true">ONELIK</div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>

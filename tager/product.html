@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — ONELIK</title>
+<meta name="theme-color" content="#0c0e12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230c0e12'/%3E%3Ctext x='30' y='44' font-family='Arial' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EO%3C/text%3E%3Ccircle cx='50' cy='46' r='6' fill='%231d3a6b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="product">
+
+<a class="skip-link" href="index.html#shop">Skip to shop</a>
+
+<header class="header is-solid" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="ONELIK home">ONELIK<i></i></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="index.html#shop" class="nav-link is-active">Shop</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" type="button" data-cart-open aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1.2 13H4.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-count" data-cart-count hidden>0</span>
+      </button>
+      <button class="burger" type="button" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <nav class="mmenu-nav" aria-label="Mobile navigation">
+    <a href="index.html"><i>01</i>Home</a>
+    <a href="index.html#shop"><i>02</i>Shop</a>
+    <a href="index.html#about"><i>03</i>About</a>
+    <a href="index.html#contact"><i>04</i>Contact</a>
+  </nav>
+  <div class="mmenu-foot">
+    <p>Carefully selected. Made for modern living.</p>
+    <a class="btn btn-navy btn-sm" href="https://wa.me/201062703091" target="_blank" rel="noopener">WhatsApp Us</a>
+  </div>
+</div>
+
+<main class="page-main">
+  <section class="sec pd-sec">
+    <div class="container">
+      <a class="crumb" href="index.html#shop" data-rv>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        Back to Shop
+      </a>
+
+      <div class="pd-grid">
+        <figure class="pd-media" data-rv>
+          <img id="pdImage" src="" alt="" data-fallback width="900" height="1125">
+          <span class="pd-badge" id="pdBadge" hidden></span>
+        </figure>
+
+        <div class="pd-info">
+          <p class="eyebrow" id="pdCategory" data-rv style="--d:.05s"></p>
+          <h1 class="pd-name" data-rv style="--d:.1s" id="pdName"></h1>
+          <div class="pd-price-row" data-rv style="--d:.15s">
+            <span class="pd-price" id="pdPrice"></span>
+            <span class="pd-old" id="pdOld" hidden></span>
+          </div>
+
+          <p class="pd-desc ar" dir="rtl" id="pdDesc" data-rv style="--d:.2s"></p>
+
+          <div class="pd-benefits" data-rv style="--d:.26s">
+            <h3>Why you'll like it</h3>
+            <ul id="pdBenefits"></ul>
+          </div>
+
+          <div class="pd-buy" data-rv style="--d:.32s">
+            <div class="stepper" aria-label="Quantity">
+              <button type="button" data-step="-1" aria-label="Decrease quantity">−</button>
+              <input id="pdQty" type="text" inputmode="numeric" value="1" aria-label="Quantity" readonly>
+              <button type="button" data-step="1" aria-label="Increase quantity">+</button>
+            </div>
+            <a class="btn btn-navy btn-lg" id="pdOrderBtn" href="#">Order Now
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <button class="btn btn-outline btn-block" type="button" id="pdAddCart" data-rv style="--d:.38s">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="17"><path d="M6 7h12l1.2 13H4.8L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            Add to Cart</button>
+
+          <ul class="trust" data-rv style="--d:.44s">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/></svg>Cash on delivery</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Fast nationwide shipping</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6l8-3Z"/><path d="M9 12l2 2 4-4"/></svg>Quality checked</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec related">
+    <div class="container">
+      <div class="sec-head" data-rv>
+        <div>
+          <p class="eyebrow">Keep exploring</p>
+          <h2 class="sec-title"><span class="lm"><span>You may also like</span></span></h2>
+        </div>
+      </div>
+      <div class="grid grid-3" id="relatedGrid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="logo logo-light">ONELIK<i></i></p>
+        <p>A modern online store bringing together carefully selected products for everyday life.</p>
+      </div>
+      <nav class="footer-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#shop">Shop</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="https://wa.me/201062703091" target="_blank" rel="noopener">WhatsApp — +20 106 270 3091</a>
+        <a href="mailto:hello@oneliks.store">hello@oneliks.store</a>
+        <span>Cairo, Egypt</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ONELIK. All rights reserved.</p>
+      <p>Developed by <strong>Mohaned Eltohami</strong></p>
+    </div>
+  </div>
+  <div class="footer-word" aria-hidden="true">ONELIK</div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
